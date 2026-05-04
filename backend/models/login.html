@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+<head> 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login / Sign Up - Shanti</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #064e3b;
+      --secondary-color: #10b981;
+      --accent-color: #fbbf24;
+      --text-light: #f8fafc;
+    }
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: linear-gradient(-45deg, #064e3b, #022c22, #065f46, #022c22);
+      background-size: 400% 400%;
+      animation: gradientBG 15s ease infinite;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      overflow: hidden;
+    }
+
+    @keyframes gradientBG {
+      0% { background-position: 0% 50%; }
+      50% { background-position: 100% 50%; }
+      100% { background-position: 0% 50%; }
+    }
+
+    .glass-panel {
+      background: rgba(255, 255, 255, 0.05);
+      backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 24px;
+      padding: 40px;
+      width: 100%;
+      max-width: 400px;
+      box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+      position: relative;
+      overflow: hidden;
+      transition: all 0.5s ease;
+    }
+
+    .glass-panel::before {
+      content: "";
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(251, 191, 36, 0.05) 0%, transparent 70%);
+      pointer-events: none;
+    }
+
+    h2 {
+      font-family: 'Playfair Display', serif;
+      color: var(--accent-color);
+      text-align: center;
+      margin-bottom: 30px;
+      font-size: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .input-group {
+      position: relative;
+      margin-bottom: 20px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px 16px;
+      background: rgba(255, 255, 255, 0.07);
+      border: 1px solid rgba(255, 255, 255, 0.1);
+      border-radius: 12px;
+      color: white;
+      font-size: 0.95rem;
+      outline: none;
+      transition: all 0.3s ease;
+    }
+
+    input:focus {
+      background: rgba(255, 255, 255, 0.12);
+      border-color: var(--accent-color);
+      box-shadow: 0 0 15px rgba(251, 191, 36, 0.1);
+    }
+
+    input::placeholder {
+      color: rgba(255, 255, 255, 0.4);
+    }
+
+    button {
+      width: 100%;
+      padding: 14px;
+      margin-top: 10px;
+      border: none;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #fbbf24, #d97706);
+      color: #064e3b;
+      font-weight: 600;
+      font-size: 1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(217, 119, 6, 0.3);
+    }
+
+    button:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(217, 119, 6, 0.4);
+      filter: brightness(1.1);
+    }
+
+    button:active {
+      transform: translateY(0);
+    }
+
+    .footer-text {
+      color: rgba(248, 250, 252, 0.7);
+      text-align: center;
+      margin-top: 25px;
+      font-size: 0.9rem;
+    }
+
+    .footer-text a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: 500;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    .footer-text a:hover {
+      text-decoration: underline;
+    }
+
+    .home-link {
+      display: block;
+      text-align: center;
+      margin-top: 20px;
+      color: rgba(255, 255, 255, 0.5);
+      text-decoration: none;
+      font-size: 0.85rem;
+      transition: 0.3s;
+    }
+
+    .home-link:hover {
+      color: white;
+    }
+
+    /* Form Transitions */
+    #signupForm {
+      display: none;
+    }
+
+    .fade-in {
+      animation: fadeIn 0.5s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="glass-panel fade-in" id="loginForm">
+    <h2>Welcome Back</h2>
+    <form action="/login" method="POST">
+      <div class="input-group">
+        <input type="email" name="email" placeholder="Email Address" required />
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Password" required />
+      </div>
+      <button type="submit">LOGIN</button>
+      <a href="/Shanti/index.html" class="home-link">&#8592; Back to Sanctuary</a>
+    </form>
+    <p class="footer-text">New to Shanti? <a onclick="toggleForms()">Create Account</a></p>
+  </div>
+
+  <div class="glass-panel fade-in" id="signupForm">
+    <h2>Join Shanti</h2>
+    <form action="/login" method="POST"> <!-- Using same endpoint as per existing logic -->
+      <div class="input-group">
+        <input type="text" name="name" placeholder="Full Name" required />
+      </div>
+      <div class="input-group">
+        <input type="email" name="email" placeholder="Email Address" required />
+      </div>
+      <div class="input-group">
+        <input type="password" name="password" placeholder="Create Password" required />
+      </div>
+      <button type="submit">SIGN UP</button>
+      <a href="/Shanti/index.html" class="home-link">&#8592; Back to Sanctuary</a>
+    </form>
+    <p class="footer-text">Already a member? <a onclick="toggleForms()">Login</a></p>
+  </div>
+
+  <script>
+    function toggleForms() {
+      const login = document.getElementById("loginForm");
+      const signup = document.getElementById("signupForm");
+      
+      if (login.style.display === "none") {
+        login.style.display = "block";
+        signup.style.display = "none";
+      } else {
+        login.style.display = "none";
+        signup.style.display = "block";
+      }
+    }
+  </script>
+
+</body>
+</html>
