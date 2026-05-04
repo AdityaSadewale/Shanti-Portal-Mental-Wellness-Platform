@@ -64,6 +64,7 @@ Launch the Platform:
 
 Bash
 npm start
+
 👨‍💻 Developed By
 Aditya Sadewale
 
