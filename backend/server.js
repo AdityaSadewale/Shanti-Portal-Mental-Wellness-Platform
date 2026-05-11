@@ -73,6 +73,7 @@ app.post('/login', async (req, res) => {
       await user.save();
     }
 
+    
     // Redirect to homepage after successful login/signup
     res.redirect('/Shanti/index.html');
   } catch (error) {
