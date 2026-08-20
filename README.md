@@ -5,6 +5,7 @@ A comprehensive, modern web application dedicated to mental health awareness, ac
 ---
 
 
+
 ## 🌟 Vision
 
 The Shanti Portal aims to destigmatize mental health by providing an intuitive, "peace-first" interface where users feel safe and empowered to seek help and practice self-care.
