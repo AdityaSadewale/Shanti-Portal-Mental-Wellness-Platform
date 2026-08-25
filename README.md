@@ -10,6 +10,7 @@ The Shanti Portal aims to destigmatize mental health by providing an intuitive, 
 
 ---
 
+
 ## 🚀 Key Features
 
 *   **Wellness Tracking:** Interactive mood logs and habit trackers to help users visualize their mental health journey.
