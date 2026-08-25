@@ -3,7 +3,6 @@
 A comprehensive, modern web application dedicated to mental health awareness, accessibility, and personal wellness tracking. **Shanti Portal** provides a serene digital space for users to access resources, track their emotional well-being, and connect with professional support systems.
 ---
 
-
 ## 🌟 Vision
 
 The Shanti Portal aims to destigmatize mental health by providing an intuitive, "peace-first" interface where users feel safe and empowered to seek help and practice self-care.
