@@ -1,7 +1,5 @@
 # 🌿 Shanti Portal | Mental Wellness Platform
 
-
-
 A comprehensive, modern web application dedicated to mental health awareness, accessibility, and personal wellness tracking. **Shanti Portal** provides a serene digital space for users to access resources, track their emotional well-being, and connect with professional support systems.
 ---
 
