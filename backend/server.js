@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const helmet = require('helmet');
 const bcrypt = require('bcryptjs');
 
-
 const app = express();
 const PORT = process.env.PORT || 3000;
 
