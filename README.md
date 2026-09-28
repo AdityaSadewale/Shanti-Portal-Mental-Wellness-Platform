@@ -21,7 +21,6 @@ The Shanti Portal aims to destigmatize mental health by providing an intuitive, 
 
 ---
 
-
 ## 🛠️ Tech Stack
 
 | Layer | Technology |
